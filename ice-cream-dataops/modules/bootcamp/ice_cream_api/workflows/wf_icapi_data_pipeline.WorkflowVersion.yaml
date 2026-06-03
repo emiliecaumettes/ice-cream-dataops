@@ -7,6 +7,7 @@ workflowDefinition:
     parameters:
       transformation:
         externalId: first_transformation
+        concurrencyPolicy: fail
     retries: 3
     timeout: 3600
     onFailure: abortWorkflow
@@ -16,6 +17,7 @@ workflowDefinition:
     parameters:
       transformation:
         externalId: second_transformation
+        concurrencyPolicy: fail
     retries: 3
     timeout: 3600
     onFailure: abortWorkflow
