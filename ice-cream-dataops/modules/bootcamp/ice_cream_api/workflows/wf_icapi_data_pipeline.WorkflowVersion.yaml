@@ -1,16 +1,18 @@
-workflowExternalId: wf_icapi_data_pipeline
+workflowExternalId: 'wf_icapi_data_pipeline'
 version: '1'
 workflowDefinition:
   tasks:
-  - externalId: create_asset_hierarchy
-    type: transformation
+  - externalId: 'create_asset_hierarchy'
+    type: 'transformation'
     parameters:
       transformation:
-        externalId: first_transformation
+        externalId: 'first_transformation'
         concurrencyPolicy: fail
+    name: 'tr 1'
+    description: 1st transformation
     retries: 3
     timeout: 3600
-    onFailure: abortWorkflow
+    onFailure: 'abortWorkflow'
    
   - externalId: contextualize_ts_assets
     type: transformation
@@ -18,6 +20,8 @@ workflowDefinition:
       transformation:
         externalId: second_transformation
         concurrencyPolicy: fail
+    name: 'tr 2'
+    description: 2nd transformation
     retries: 3
     timeout: 3600
     onFailure: abortWorkflow

@@ -1,4 +1,4 @@
-externalId: icapi_trigger
+externalId: 'icapi_trigger'
 triggerRule:
   triggerType: schedule
   cronExpression: '*/15 * * * *'
