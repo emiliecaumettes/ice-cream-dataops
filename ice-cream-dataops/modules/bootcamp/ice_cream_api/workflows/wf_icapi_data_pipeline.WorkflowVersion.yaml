@@ -6,7 +6,7 @@ workflowDefinition:
     type: 'transformation'
     parameters:
       transformation:
-        externalId: 'first_transformation'
+        externalId: create_asset_hierarchy
         concurrencyPolicy: fail
     name: 'tr 1'
     description: 1st transformation
@@ -18,7 +18,7 @@ workflowDefinition:
     type: transformation
     parameters:
       transformation:
-        externalId: second_transformation
+        externalId: contextualize_ts_assets
         concurrencyPolicy: fail
     name: 'tr 2'
     description: 2nd transformation
@@ -32,7 +32,7 @@ workflowDefinition:
     type: function
     parameters:
       function:
-        externalId: first_function
+        externalId: icapi_datapoints_extractor
         data: { "hours": 1 }
     retries: 3
     timeout: 3600
@@ -44,7 +44,7 @@ workflowDefinition:
     type: function
     parameters:
       function:
-        externalId: second_function
+        externalId: oee_timeseries
         data: { "hours": 1 }
     retries: 3
     timeout: 3600
