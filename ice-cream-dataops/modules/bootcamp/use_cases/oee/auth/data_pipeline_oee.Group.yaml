@@ -1,4 +1,4 @@
-name: data_pipeline_oee_client_id
+name: data_pipeline_oee
 sourceId: {{data_pipeline_oee_source_id}}
 
 capabilities:
